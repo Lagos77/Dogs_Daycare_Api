@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Dogs_Daycare_Api/static/css/main.964fdded.css",
+    "main.js": "/Dogs_Daycare_Api/static/js/main.6801b087.js",
+    "static/js/787.ad596ad2.chunk.js": "/Dogs_Daycare_Api/static/js/787.ad596ad2.chunk.js",
+    "index.html": "/Dogs_Daycare_Api/index.html",
+    "main.964fdded.css.map": "/Dogs_Daycare_Api/static/css/main.964fdded.css.map",
+    "main.6801b087.js.map": "/Dogs_Daycare_Api/static/js/main.6801b087.js.map",
+    "787.ad596ad2.chunk.js.map": "/Dogs_Daycare_Api/static/js/787.ad596ad2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.964fdded.css",
+    "static/js/main.6801b087.js"
+  ]
+}
