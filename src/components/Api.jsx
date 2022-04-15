@@ -2,10 +2,17 @@ import React from "react";
 
 class Api extends React.Component {
 
+    // constructor(props) {
+    //     this.state = {
+    //         loading: true,
+    //         dogs: [],
+    //         owner: []
+    //     }
+    // };
+
     state = {
         loading: true,
-        dogs: [],
-        owner: []
+        dogs: []
     };
 
     async componentDidMount() {
@@ -13,10 +20,25 @@ class Api extends React.Component {
         const response = await fetch(url);
         const data = await response.json();
         this.setState( {dogs: data, loading: false});
-        //console.log(data.owner);
-        //this.setState( {owner: data.owner});
 
     }
+
+    // async componentDidMount() {
+    //    await fetch("https://api.jsonbin.io/b/624ddc6f5912290c00f5af18")
+    //     .then(resp => resp.json())
+    //     .then(data =>{
+    //         const dogsList = [];
+    //         const dogShip = [];
+
+    //         data.forEach(item =>{
+    //             dogsList.push(item)
+
+    //         });
+    //         this.setState({
+    //             dogs: [...this.state.dogs, ...dogsList]
+    //         });
+    //     });
+    // }
 
     render() {
 
@@ -33,8 +55,9 @@ class Api extends React.Component {
         this.state.dogs.forEach(dog => {
             dogsList.push(
             <div key={dog.chipNumber}>
-              <img src={dog.img} />
+              <img src={dog.img} alt=""/>
               <div>Name : {dog.name}</div>
+              <div>Owner name: {dog.owner.name}</div>
               <div>Age : {dog.age}</div>
               <div>Breed : {dog.breed}</div>
               <div>Chipnumber : {dog.chipNumber}</div>
@@ -43,24 +66,22 @@ class Api extends React.Component {
             );
         });
 
-        const dogOwner = [];
-
-        this.state.owner.forEach(own => {
-            dogOwner.push(
-                <div key={own.phoneNumber}>
-                    <div>Name : {own.name}</div>
-                    <div>Lastname : {own.lastName}</div>
-                    <div>Phone : {own.phoneNumber}</div>
-                </div>
-            )
-        })
-
         return (
             <div>
                 {dogsList}
             </div>
         );
     }
+
+    // render () {
+    //     return (
+    //         <div>
+    //             {
+    //                 this.state.dogsList.lenght !== 0 && <Api data={this.state}/>
+    //             }
+    //         </div>
+    //     )
+    // }
 
 }
 

@@ -1,12 +1,11 @@
 import React from "react";
-import Api from "./Api";
 
 const Register = ({nextScreen}) => {
 
     return (
         <section>
            <h1>Register</h1>
-            <h2>Registered owners and dogs are showed here!</h2>
+            <h2>Registered owners and dogs are showed here!</h2>           
             {/* Owner name */}
             {/* Owner lastname */}
             {/* Owner number */}
