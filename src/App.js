@@ -10,13 +10,14 @@ function App() {
   const [dogs, dataDogs] = useState([]);
 
   useEffect(() => {
-    const url = "https://api.jsonbin.io/b/624ddc6f5912290c00f5af18"; 
-
-    fetch(url)
-    .then (response => response.json())
-    .then (dataDogs);
+    async function fetchAPI() {
+      const url = "https://api.jsonbin.io/b/624ddc6f5912290c00f5af18"; 
+      await fetch(url)
+      .then (response => response.json())
+      .then (dataDogs);
+    }
+    fetchAPI()
   }, []);
-
 
   return (
     <div className="App">
