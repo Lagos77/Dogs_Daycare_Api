@@ -16,16 +16,18 @@ const Register = ({dogs}) => {
 
 
     return (
-        <section>
+        <div>
            <h1>Register</h1>
-            <h2>Registered owners and dogs are showed here!</h2>           
-            <div>Owner name : {selectedDog.owner.name} </div>
-            <div>Owner lastname : {selectedDog.owner.lastName}</div>
-            <div>Contact : {selectedDog.owner.phoneNumber}</div>
+            <h2>Registered owners and dogs are showed here!</h2> 
+             <div className="ownerInfo">          
+                 <p>Owner name : {selectedDog.owner.name} </p>
+                 <p>Owner lastname : {selectedDog.owner.lastName}</p>
+                 <p>Contact : {selectedDog.owner.phoneNumber}</p>
+             </div>
             <Link to="/dogs">
-            <button>Navigate back to dogs</button>
+            <button className="navButton">Navigate back to dogs</button>
             </Link>
-        </section>
+        </div>
     )
 
 }

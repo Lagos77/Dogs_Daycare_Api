@@ -1,0 +1,7 @@
+.enterButton {
+    width: 20em;
+    border: lightblue;
+    background: rgb(53, 117, 138);
+    color: white;
+    border-radius: 90em;
+}
