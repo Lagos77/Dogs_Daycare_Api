@@ -1,13 +1,18 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-const Welcome = ({nextScreen}) => {
+const Welcome = () => {
 
     return (
-        <section>
-           <h1>Welcome to my Dog-app</h1>
-            <h2>Made by Lagos77</h2>
-            <button onClick={nextScreen}>Enter</button>
-        </section>
+        <div>
+            <section>
+             <h1>Welcome to my Dog-app</h1>
+             <h2>Made by Lagos77</h2>
+             <Link to="/dogs">
+             <button>Enter</button>
+             </Link>
+            </section>
+        </div>
     )
 
 }

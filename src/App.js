@@ -1,32 +1,47 @@
 import './App.css';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Info from './components/Info';
 import Register from './components/Register';
 import Welcome from './components/Welcome';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
 
-  const WELCOME = 'welcome', REGISTER = 'register', INFO = 'info';
-  const [currentScreen, setCurrentScreen] = useState(WELCOME);
+  const [dogs, dataDogs] = useState([]);
 
-  let content = null;
+  useEffect(() => {
+    const url = "https://api.jsonbin.io/b/624ddc6f5912290c00f5af18"; 
 
-  switch(currentScreen){
-    case INFO :
-      content = <Info nextScreen={() => setCurrentScreen(REGISTER) }/>
-      break;
-    case REGISTER :
-        content = <Register nextScreen={() => setCurrentScreen(INFO)} />
-      break;
-    default:
-      content = <Welcome nextScreen={() => setCurrentScreen(REGISTER)} />
+    fetch(url)
+    .then (response => response.json())
+    .then (dataDogs);
+  }, []);
 
-  }
 
   return (
     <div className="App">
       <main>
-        {content}
+        <Router>
+          <Routes>
+
+           <Route exact path="/" element={
+             <Welcome />
+           } />
+
+           <Route path="/welcome" element={
+             <Welcome />
+           } />
+
+            <Route path="/register/:chipNumber" element={
+             <Register dogs = {dogs} />
+           } />
+
+            <Route path="/dogs" element={
+             <Info dogs = {dogs} />
+           } />
+
+         </Routes>
+        </Router>
       </main>
     </div>
   );

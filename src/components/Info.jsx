@@ -1,16 +1,37 @@
 import React from "react";
-import Api from "./Api";
+import { Link } from "react-router-dom";
 
-const Info = ({nextScreen}) => {
+const Info = ({dogs}) => {
+
+    const dogList = []
+
+    dogs.forEach(dog => {
+
+        dogList.push(
+            <div key={dog.chipNumber}>
+            <img src={dog.img} alt=""/>
+            <div>Name : {dog.name}</div>   
+                <div className="dogSelected" key={dog.chipNumber}>
+                  <Link to={`/register/${dog.chipNumber}`}>
+                  <button className="ownerinfo">See owner information</button>
+                  </Link> 
+                </div>      
+            <div>Age : {dog.age}</div>
+            <div>Breed : {dog.breed}</div>
+            <p>Dog is {dog.present ? "present" : "not present"}</p>
+            <div>Chipnumber : {dog.chipNumber}</div>
+             <br />
+         </div> 
+        );
+    });
 
     return (
-        <section>
-           <h1>Info</h1>
-            <h2>You can see more info about the dogs here!</h2>
-            <Api></Api>
-            <br></br>
-            <button onClick={nextScreen}>Go back to register</button>  
-        </section>
+        <div>
+            <div>
+                <h1>Info</h1>
+                {dogList}
+            </div>
+        </div>
     )
 
 }
