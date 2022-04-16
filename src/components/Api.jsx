@@ -10,18 +10,18 @@ class Api extends React.Component {
     //     }
     // };
 
-    state = {
-        loading: true,
-        dogs: []
-    };
+    // state = {
+    //     loading: true,
+    //     dogs: []
+    // };
 
-    async componentDidMount() {
-        const url = "https://api.jsonbin.io/b/624ddc6f5912290c00f5af18";
-        const response = await fetch(url);
-        const data = await response.json();
-        this.setState( {dogs: data, loading: false});
+    // async componentDidMount() {
+    //     const url = "https://api.jsonbin.io/b/624ddc6f5912290c00f5af18";
+    //     const response = await fetch(url);
+    //     const data = await response.json();
+    //     this.setState( {dogs: data, loading: false});
 
-    }
+    // }
 
     // async componentDidMount() {
     //    await fetch("https://api.jsonbin.io/b/624ddc6f5912290c00f5af18")
@@ -68,7 +68,7 @@ class Api extends React.Component {
 
         return (
             <div>
-                {dogsList}
+            
             </div>
         );
     }
