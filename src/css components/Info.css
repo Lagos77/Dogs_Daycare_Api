@@ -72,7 +72,7 @@ h3, p{
     transform: scale(1.13);    
 }
 
-a{
+.btn-text{
     text-transform: uppercase;
     color: #1b9cfc;
     text-decoration: none;

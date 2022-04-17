@@ -31,14 +31,13 @@ const Info = ({dogs}) => {
                         <div className="btn" key={dog.chipNumber}>
                             <Link to={`/register/${dog.chipNumber}`}>
                                  <button>
-                                    <a>
+                                    <p className="btn-text">
                                       See owner information
-                                    </a>
+                                    </p>
                                  </button>
                             </Link> 
                         </div>                             
                 </div>  
-
             </div> 
         );
     });
