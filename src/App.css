@@ -1,27 +1,3 @@
 .App {
   text-align: center;
 }
-
-.selectInfo {
-  display: flex;
-  padding:  1em;
-  background-color: rgb(198, 227, 236);
-}
-
-img {
-  width: 50%;
-  height: 20%;
-  object-fit: cover;
-}
-
-button {
-  padding: 1em;
-  border: lightblue;
-  color: white;
-  background-color: rgb(20, 89, 238);
-  border-radius: 800em;
-}
-
-.dogSpec {
-  display: grid;
-}

@@ -1,0 +1,65 @@
+.owner-content{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+h1 {
+    color: rgb(43, 178, 223);
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 3em;
+    color: rgb(1, 138, 184);
+}
+
+.owner-info{
+  
+    padding: 1.5em;
+    overflow: hidden;
+    box-shadow:0px 0px 15px -5px;
+
+}
+
+.owner-name{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.owner-lastname{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.owner-contact{
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.owner-btn{
+    display: flex;
+    justify-content: center;  
+    margin-top: 1em;
+}
+
+.owner-btn button{
+    padding: 00.5rem;
+    background-color: white;
+    border: none;
+    transition: 0.2s;
+    margin-bottom: 0.5rem;
+    border-radius: 3px;
+}
+
+.owner-btn button:hover{
+    background: rgba(27, 156, 252, 0.1);
+    transform: scale(1.12);    
+}
+
+/* p {
+    font-size: 2em;
+    font-weight: bold;
+} */
