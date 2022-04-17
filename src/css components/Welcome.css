@@ -1,0 +1,28 @@
+.primary  {
+    color: blue;
+    font-size: 75px;
+}
+
+.enterButton {
+    width: 8em;
+    border: 8px solid lightblue;
+    background: rgb(53, 117, 138);
+    color: white;
+    border-radius: 70em;
+    font-size: 1.4em;
+    margin: auto;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.enterButton:hover{
+    opacity: 0.5;
+    transition-duration: 0.5s;
+    transform: scale(0.95);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
