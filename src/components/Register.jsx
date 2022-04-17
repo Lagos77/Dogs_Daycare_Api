@@ -15,7 +15,6 @@ const Register = ({dogs}) => {
         }
     });
 
-
     return (
         <div className="owner-content">
            <h1>Owner information for dog {selectedDog.name}</h1>
@@ -27,9 +26,9 @@ const Register = ({dogs}) => {
                  <div className="owner-btn">
                     <Link to="/dogs">
                          <button>
-                             <a>
-                             Navigate back to dogs
-                             </a>
+                             <p className="owner-btn-text">
+                             Navigate back to daycare list
+                             </p>
                           </button>
                      </Link>
                  </div>
